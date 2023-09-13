@@ -21,20 +21,20 @@ class MySpider(scrapy.Spider):
             args={
                 'wait': 5,  
                 'html': 1,   
+            },
             body=login_data_encoded  
         )
 
-    def parse_login(self, response):
-        
+    def parse_login(self, response):      
         if 'Atsijungti' in response.text:
             print('Log In Successful!')
             with open('login_html.html', 'w', encoding='utf-8') as file:
                 file.write(response.text)
 
-          
+
             search_query = '305485432'
 
-      
+
             search_url = 'https://www.cr.lt/imones/n/noriu/search/'
 
             #cookies = {}
@@ -42,15 +42,15 @@ class MySpider(scrapy.Spider):
             #    key, value = set_cookie.decode('utf-8').split('=', 1)
             #    cookies[key] = value.split(';')[0]
 
-            
+
             yield SplashRequest(
                 search_url,
                 self.parse_search_results,
-                endpoint='render.html', 
+                endpoint='render.html',  # Use the render endpoint to render JavaScript
                 args={
-                    'wait': 5, 
-                    'html': 1,   
-                    'lua_source': self.get_search_script(search_query), 
+                    'wait': 5,  
+                    'html': 1,  
+                    'lua_source': self.get_search_script(search_query),  
                 }
                 #cookies=cookies
             )
@@ -75,7 +75,8 @@ class MySpider(scrapy.Spider):
 
     def parse_search_results(self, response):
         
-
+        
+        
         with open('search_html.html', 'w', encoding='utf-8') as file:
                 file.write(response.text)
         
