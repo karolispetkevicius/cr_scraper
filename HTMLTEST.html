@@ -1,0 +1,1822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"><html><head>
+    <title>Informacija apie įmones,įmonių vadovai,kontaktai</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="description" content="Visos Lietuvos įmonės. Įmonių vadovai, adresų informacija, įmonės kontaktai ir daug kitos info apibūdinančios firmos veiklą.">
+    <meta name="keywords" content="įmonės,įmonių vadovai,įmonių kontaktai, marketingas,duomenų bazė,veiklą,kreditingumas,adresų,adresas,firmos,kontaktai,tel, fax,email,vadovas,direktorius,prezidentas,bankrotas, bankroto, bankroto, nemokumas, nemokumo ,nemokumui">
+    <meta name="copyright" content="www.cr.lt">
+    <meta name="revisit-after" content="1 days">
+    <meta name="ROBOTS" content="ALL">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img_cr/favicon.ico">
+    <link rel="stylesheet" href="/css_cr/main_responsive.1665088016.css" type="text/css" media="all">
+    
+
+    <link rel="stylesheet" href="/css_cr/print.1174037018.css" type="text/css" media="print">
+    <link rel="stylesheet" href="/css_cr/bootstrap_glyphicons_min.1506624190.css" type="text/css" media="print">
+    
+
+    <link rel="stylesheet" type="text/css" href="/js_cr/dhtmlxTree/css/dhtmlXTree.css">
+    <link rel="search" type="application/opensearchdescription+xml" title="CR search" href="/opensearch.xml">
+    
+            <script async="" src="https://static.mailerlite.com/js/universal.js?v1694497"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/js_cr/index.1506624191.js"></script>
+    <script type="text/javascript" src="/js_cr/sorttable.js"></script>
+    <script type="text/javascript" src="/js_cr/dialogs.js"></script>
+    <script type="text/javascript" src="/js_cr/jquery-pulsate.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css" type="text/css" media="all">
+
+    <script type="text/javascript">
+
+        var evnt = new Eventer();
+
+    </script>
+
+<!--[if gte IE 5]>
+<style type="text/css"> #blanket {
+    filter: alpha(opacity=65);
+}</style><![endif]-->
+    
+    <script type="text/javascript">
+        var root = "/";
+
+        function openMenu2(child_id) {
+            var child = GetByID(child_id);
+
+            if (child.className === '' || child.className === 'close') {
+                child.className = 'open';
+            } else {
+                child.className = 'close';
+            }
+            var ocount = $(child).parent().parent().children("ul")
+                .children("li.open").children("span").length;
+            mssrc = $("#my_service_img").attr("src");
+            if (ocount == 3) {
+                mssrc = mssrc.replace("right", "up");
+                $("#my_service_img").attr("src", mssrc);
+                services_opened = true;
+            } else if (ocount == 0) {
+                mssrc = mssrc.replace("up", "right");
+                $("#my_service_img").attr("src", mssrc);
+                services_opened = false;
+            }
+        }
+
+        var disp_div_opened = false;
+        var disp2_div_opened = false;
+        var search_tooltip_opened = false;
+        var country_dropdown_opened = false;
+
+        var hide = false;
+        //Js Ready block start
+        $(document).ready(function () {
+            $('.melyna').width(($('.melyna').width() < 200) ? "200" : "auto");
+
+            $("#disp_type_span").hover(show_disp_type_div, hide_disp_type_div);
+            $("#disp_type_td").hover(show_disp_type_div, hide_disp_type_div);
+            $("#disp_type_span").click(switch_disp_type_div);
+            $("#disp_type_div").hover(show_disp_type_div, hide_disp_type_div);
+
+            $("#my").hover(show_disp2_type_div, hide_disp2_type_div);
+            $("#disp2_type_div").hover(show_disp2_type_div, hide_disp2_type_div);
+
+
+            
+            
+
+
+
+            $("#country").on('select:open', function (event) {
+                country_dropdown_opened = true;
+            });
+            $("#country").on('select:close', function (event) {
+                country_dropdown_opened = false;
+            });
+
+            
+            $('input#qs_input').on('input keyup', function () {
+                $('input[name="Company"]').val($(this).val());
+                $('input[name="companyname"]').val($(this).val());
+            });
+        });
+
+        //Js Ready block end
+
+        function show_disp_type_div() {
+            disp_div_opened = true;
+            var top = $("#disp_type_span").offset().top + 25;
+            var left = $("#disp_type_span").offset().left - 39;
+            $("div[name=disp_type_div]").css({
+                left: left,
+                top: top
+            });
+            var width = $("#disp_type_div").width();
+            var height = $("#disp_type_div").height();
+            $("#disp_type_div_back").css({
+                width: width,
+                height: height
+            });
+            hide_disp2_type_div(null, false);
+            $("div[name=disp_type_div]").show();
+        }
+
+        function hide_disp_type_div(e, wait) {
+            if (wait == undefined) {
+                disp_div_opened = false;
+                setTimeout(function () {
+                    hide_disp_type_div(e, true)
+                }, 1000);
+            } else {
+                if (!disp_div_opened) {
+                    $("div[name=disp_type_div]").hide();
+                }
+            }
+        }
+
+        function switch_disp_type_div() {
+            if (!disp_div_opened) {
+                show_disp_type_div();
+            } else {
+                hide_disp_type_div();
+            }
+        }
+
+        /**
+         * Aplinkos pakeitimas
+         * @param type naujas
+         */
+        function set_disp_type(type) {
+            $.getJSON('/imones/n/set/1/disp_type/' + type, function (data) {
+                
+                                // Pakeičiam paveiksliuką į naują
+                $("#disp_type_img").attr("src", data.img);
+                $("#disp_type_div").replaceWith(data.html);
+
+                // Nuo mygtuko nuimam aplinkos spalvą
+                $("#disp_type_span").removeClass('aplinkabtn_1 aplinkabtn_2 aplinkabtn_3 aplinkabtn_4 aplinkabtn_5');
+                // Ant mygtuko uždedam naujos aplinkos spalvą
+                $("#disp_type_span").addClass("aplinkabtn_" + type);
+                                
+            });
+        }
+
+        //region "Mano duomenys" dropdown
+        function show_disp2_type_div() {
+            disp2_div_opened = true;
+            var top = $("#my").offset().top + 25;
+            var left = $("#my").offset().left + 5;
+            $("div[id=disp2_type_div]").css({
+                left: left,
+                top: top
+            });
+            hide_disp_type_div(null, false);
+            $("div[id=disp2_type_div]").show();
+        }
+
+        function hide_disp2_type_div(e, wait) {
+            if (wait === undefined) {
+                disp2_div_opened = false;
+                setTimeout(function () {
+                    hide_disp2_type_div(e, true)
+                }, 1000);
+            } else {
+                if (!disp2_div_opened) {
+                    $("div[id=disp2_type_div]").hide();
+                }
+            }
+        }
+
+        //endregion
+
+        //region search tooltip
+        function show_search_tooltip() {
+            console.log('asas');
+            search_tooltip_opened = true;
+            var bottom = $(".qs_div").offset().bottom + 20;
+            var left = $(".qs_div").offset().left;
+
+
+            $("#detali_paieska").hide();
+            $("#hoverSearch").show();
+            $('.qs_div').addClass('qs_div_hover');
+            $(".select2big span.select2-selection--single").addClass("countryDropdownHover");
+        }
+
+        function hide_search_tooltip(e, wait) {
+            if (search_tooltip_opened) {
+                search_tooltip_opened = false;
+                $("#detali_paieska").show();
+                $("#hoverSearch").hide();
+                $('.qs_div').removeClass('qs_div_hover');
+                $(".select2big span.select2-selection--single").removeClass("countryDropdownHover");
+
+            }
+        }
+
+        //endregion
+
+        function hovIN(elem) {
+            $('#td' + elem).addClass("hov");
+        }
+
+        function hovOUT(elem) {
+            $('#td' + elem).removeClass("hov");
+        }
+
+        function sel(elem) {
+            $("th input:checkbox").each(
+                function (i) {
+                    if (this.value == elem) {
+                        this.checked = true;
+                        $('#td' + elem).addClass("sel");
+                    } else {
+                        this.checked = false;
+                        $('#td' + this.value).removeClass("sel");
+                    }
+                });
+        }
+
+        function jq_account(x, ccode, ibanacc) {
+            $.post(root + "ajax/account_akcija.php", {x: x, y: ccode, z: ibanacc}, function (data) {
+                if (data.ok) {
+                    if (data.account != undefined) {
+                        $('#account_akcija_t > tbody:last').append('<tr><td width="350px">' + data.code + '<br>' + data.pavad + '</td><td width="150px">' + data.account + '</td></tr>');
+                        $("#aa_code").val('');
+                        $("#aa_iban").val('');
+                        $("#aa_save").attr('disabled', true);
+                        $("#account_akcija_t")
+                            .after("<div id=\"end_uzkl\" class=\"attention noprint\"><div class=\"good\">" + data.msg + "</div></div>");
+                        $("#end_uzkl").fadeOut(5000, function () {
+                            $("#end_uzkl").remove();
+                        });
+                    } else {
+                        $("#dialog_div").html(data.html);
+                    }
+                } else {
+                    $("#account_akcija_t")
+                        .after("<div id=\"error_uzkl\" class=\"attention noprint\"><div class=\"errors\">" + data.errMsg + "</div></div>");
+                    $("#error_uzkl").fadeOut(9000, function () {
+                        $("#error_uzkl").remove();
+                    });
+                }
+            }, "json");
+        }
+
+
+    </script>
+        
+    <style>
+        #back-top {
+            position: fixed;
+            bottom: 230px;
+            left: 1000px;
+            margin: 10px 10px 10px 50px;
+        }
+
+        #back-top a {
+            width: 88px;
+            display: block;
+            text-align: center;
+            font: 11px/100% Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #bbb;
+            /* background color transition */
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            transition: 1s;
+        }
+
+        #back-top a:hover {
+            color: #000;
+        }
+
+
+
+        #back-top a:hover span {
+            background-color: #777;
+        }
+
+        .select2-container{left: initial !important;
+            top: initial !important;}
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#back-top").hide();
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 600) {
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+                $('#back-top a, #go-top').click(function () {
+                    $('body,html').animate({scrollTop: 0}, 300);
+                    return false;
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            //region sidebar scrolling
+            var speed = 0;
+            var alimit = 450;
+            var menu = $('#main-menu');
+            var offset = menu.offset().top; // Kur turi prasidėti nescrollintas meniu
+            var menuStartPos = menu.position().top; // Pradinė meniu pozicija
+            var top_offset = $('.navbar-fixed').outerHeight() + 5;
+
+            updateFloatingMenu(); //we don't have this just yet
+
+            $(window).scroll(function () {
+                updateFloatingMenu();
+
+                // Show navbar
+                $('.navbar-fixed, #go-top').toggle($(this).scrollTop() > 80);
+            });
+
+            function updateFloatingMenu() {
+                var scrollAmount = $(document).scrollTop(); // Kiek nuo viršaus nuscrollinta
+                var newPosition = menuStartPos + scrollAmount;
+
+                // Jei meniu suskleistas ir be reklamos banerio.
+                alimit = menu.height() < 120 ? 620 : 630;
+
+                /**
+                 * Jei nuskrolinta daugiau, nei prasideda pradinis meniu.
+                 * Jei contentas > 800px ir puslapio aukštis > alimit
+                 */
+                if ((scrollAmount + $('.navbar-fixed').outerHeight() > offset) && ($('.max_width').height() > 630) && ($(window).height() > alimit)) {
+                    menu.css('position', 'absolute');
+                    var topPos = (newPosition - offset) + top_offset;
+
+                    menu.stop().animate({top: topPos}, speed);
+                    $('#stabilus_ad').css('display', 'none');
+                } else {
+                    menu.stop().animate({top: menuStartPos}, speed);
+                    $('#stabilus_ad').css('display', 'block');
+                }
+
+                // Paslėpti Certifikato paveikslėlio reklamą
+                if ($('.max_width').height() < alimit) {
+                    $('#stabilus_ad').css('display', 'none');
+                } else {
+                    $('#stabilus_ad').css('display', 'block');
+                }
+            }
+
+            //endregion
+
+            //if($('.max_width').height()<alimit) $('#stabilus_ad').css('display', 'none');
+            //if($(window).height() > 840) $('#stabilus_ad').css('display', 'block');
+            //else $('#stabilus_ad').css('display', 'none');
+        });
+    </script>
+    
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/rysiai_cr/js/selectivizr-min.js"></script>
+    <![endif]-->
+
+<!-- MailerLite Universal -->
+<script>
+(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+_.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+var ml_account = ml('accounts', '1643118', 'u9l9f8n3d4', 'load');
+</script>
+<!-- End MailerLite Universal -->
+
+<link rel="stylesheet" type="text/css" href="https://static.mailerlite.com/css/universal.css?v4" media="all"><script type="text/javascript" async="" src="https://static.mailerlite.com/data/a/1643/1643118/universal/u9l9f8n3d4_popups.js?v=1694497840"></script></head>
+
+<body class="language-de search-holder">
+
+
+<script type="text/javascript" src="/js_cr/tooltip.js"></script>
+<div id="go-top">
+    <div class="arrow-up"></div>
+    <a href="#top">Grįžti į viršų</a></div>
+<div class="navbar-fixed" style="">
+    <table width="100%">
+        <tbody><tr>
+            <td width="200">
+                <div><a href="/"><img src="/img_cr/CRlt_blue.png" alt="CR.lt , nemokmas,nemokumo ,nemokumui"></a></div>
+
+            </td>
+            <td>
+                <h3 class="text-white navbar-current-page"></h3>
+            </td>
+            <td>
+                <div style="float:right;padding-right:20px;">
+                    <span class="cart_div" style="display:none;            cursor:pointer;display:none;" onclick="
+     			 window.location = '/imones/n/noriu/cart/'
+     			 ">
+  <img src="/img_cr/cart2_white.gif" alt="įmonės Prekių krepšelis" class="middle center">&nbsp;Prekių krepšelis&nbsp;<b>0 Eur</b>
+</span>
+
+                                                        </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+
+<div class="main-content-container">
+
+    <div class="header-flex-box">
+        <div class="header-wrapper">
+        <div class="crlogo-flex">
+            <a rel="canonical" href="/" class="aHead">
+                <img src="/img_cr/CRlt_new.png" alt="CR.lt">
+
+            </a>
+        </div>
+        
+        <div id="MainSearcBox">
+
+            <div class="searchRow">
+                <form style="margin:0;padding:0" name="qsearch" method="POST" id="qsearch" action="/imones/n/noriu/search/" onsubmit="return quicksearch(this)">
+
+                    <input type="hidden" name="screen_resolution" value="">
+                    <input type="hidden" name="quick_search" value="1">
+
+
+                    <div class="qs_div" style="width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+
+                        <input type="text" id="qs_input" name="qs_input" style="width: 90%" value="" placeholder="Įmonės paieška">
+                        <img id="qs_button" src="/img_cr/qs_search.png" alt="" onclick="f=GetByID('qsearch'); quicksearch(f) &amp;&amp; f.submit();">
+                    </div>
+                                            <script type="text/javascript">
+                            $(".qs_div").css('border-radius', '10px');
+                        </script>
+                                                            <div class="clear"></div>
+
+                </form>
+                <div id="detali_paieska" onclick="return show_search_tooltip()"><img src="/img_cr/arrow_bottom_blue.png" alt="open">Detali paieška</div>
+                
+
+                
+                                    <form name="m1" action="/imones/n/noriu/search/#rez" method="post" onsubmit="return submitas_search(this);">
+                        <table id="hoverSearch">
+                            <tbody><tr>
+                                <td colspan="5" onclick="return hide_search_tooltip()" class="blue pointer pad-bot" style="font-size: 9pt; padding-bottom: 10px">
+                                    ➤ Detali paieška
+                                </td>
+                            </tr>
+                            <tr id="loadform">
+                                <td valign="top">
+                                    <input type="hidden" name="country" value="LT">
+                                    <table cellspacing="0" cellpadding="0" border="0" style="vertical-align: top">
+                                        <tbody><tr>
+                                            <td>
+                                                                                                    <a href="javascript:void(0)" onmouseover="showtip(msg_1)" onmouseout="hidetip()" style="text-decoration:none">Pavadinimas*</a>
+                                                    arba Įmonės kodas
+                                                                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="txt" type="text" tabindex="10" name="Company" size="30" value="" autofocus="">
+                                                <div class="side_info nowrap">
+                                                    <input type="checkbox" name="ieskoti_ist_pavad" class="middle" checked="" id="search-names-history"><label for="search-names-history">Ieškoti ir istoriniuose pavadinimuose</label><br>
+                                                    <input type="checkbox" name="ieskoti_trademark" class="middle" disabled="" checked="" id="search-trademarks"><label for="search-trademarks">Ieškoti ir tarp prekinių ženklų</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="padd-top"><a class="disabled" href="/imones/n/noriu/registracija1/" style="text-decoration:none">Prekinis ženklas*</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input disabled="" class="txt" type="text" tabindex="14" name="Trademark" style="width:124px;" value=""></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="padd-top"><a class="disabled" href="/imones/n/noriu/registracija1/" style="text-decoration:none">Atstovas*</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="disabled"><input disabled="" class="txt" type="text" tabindex="13" name="Person" style="width:124px;" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="padd-top">Galiojantis PVM kodas</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input class="txt" type="text" tabindex="13" name="PVM" style="width:124px;" value=""></td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                                <td>&nbsp;&nbsp;</td>
+                                <td valign="top" class="disabled">
+                                    Kontaktinė informacija
+                                    <div class="addressbox">
+                                        <div class="disabled">
+                                            Telefonas<br>+370
+                                            &nbsp;<input disabled="" style="width:25px;" class="txt" type="text" maxlength="3" tabindex="14" name="PhoneCode" value="">
+                                            &nbsp;<input disabled="" style="width:60px;" class="txt" type="text" maxlength="7" tabindex="15" name="Phone" value="">
+                                        </div>
+                                        <div class="disabled">
+                                            Faksas<br>+370
+                                            &nbsp;<input disabled="" style="width:25px;" class="txt" type="text" maxlength="3" tabindex="17" name="FaxCode" value="">
+                                            &nbsp;<input disabled="" style="width:60px;" class="txt" type="text" maxlength="7" tabindex="17" name="Fax" value="">
+                                        </div>
+                                        <div class="disabled">
+                                            Mob. telefonas<br>+370
+                                            &nbsp;<input disabled="" style="width:25px;" class="txt" type="text" maxlength="3" tabindex="19" name="CellCode" value="">
+                                            &nbsp;<input disabled="" style="width:60px;" class="txt" type="text" maxlength="7" tabindex="19" name="Cell" value="">
+                                        </div>
+                                        <div class="disabled">
+                                            El. paštas<br>
+                                            <input disabled="" style="width:135px;" class="txt" type="text" tabindex="20" name="Email" value="">
+                                        </div>
+                                        <div class="disabled">
+                                            Interneto puslapis<br>
+                                            <input disabled="" style="width:135px;" class="txt" type="text" tabindex="21" name="WWW" value="">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>&nbsp;&nbsp;</td>
+                                <td valign="top" class="disabled">
+                                    Adresas
+                                    <div class="addressbox">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tbody><tr>
+                                                <td>Miestas</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input disabled="" class="txt" type="text" tabindex="22" name="City" style="width:124px;" value=""></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody><tr>
+                                                            <td>Gatvė</td>
+                                                            <td class="intend" nowrap="">Namo nr.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <input disabled="" class="txt" type="text" tabindex="23" name="Street" value="" style="width:80px;"></td>
+                                                            <td class="intend"><input disabled="" class="txt" type="text" tabindex="24" name="House" value="" style="width:34px;"></td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </div>
+                                </td>
+                            </tr>
+
+                                                        <tr>
+                                <td colspan="5">
+                                    <!-- search controls -->
+                                    <br>
+                                    <input tabindex="18" type="submit" class="btn btn-success" name="find" value="Ieškoti">&nbsp;
+                                    <input tabindex="19" type="button" class="btn btn-primary" value="Valyti" onclick="clearForm(this.form)">
+                                    <!-- end search controls -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" onclick="return hide_search_tooltip()" class="detail_search_close">
+                                    <img src="/img_cr/arrow_top_grey.png" alt="close">
+                                    Suskleisti
+                                    <img src="/img_cr/arrow_top_grey.png" alt="close">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </form>
+                    <script type="text/javascript">
+                        var phone_codes = new Array('425', '315', '381', '319', '450', '313', '528', '386', '349', '426', '447', '346', '37'
+                            , '427', '347', '46', '445', '459', '318', '343', '443', '383', '469', '421', '460'
+                            , '45', '451', '448', '319', '422', '428', '458', '440', '345', '380', '41', '449'
+                            , '441', '382', '387', '446', '444', '528', '340', '389', '310', '342', '5', '386', '385');
+                        var aktyvus;
+
+                        function validate_searchBignet(forma) {
+                            var company = typeof forma.companyname !== 'undefined' ? forma.companyname.value.replace(" ", "") : '';
+                            var identificationnumber = typeof forma.identificationnumber !== 'undefined' ? forma.identificationnumber.value.replace(" ", "") : '';
+                            var diallingcode = typeof forma.diallingcode !== 'undefined' ? forma.diallingcode.value.replace(" ", "") : '';
+                            var phonenumber = typeof forma.phonenumber !== 'undefined' ? forma.phonenumber.value.replace(" ", "") : '';
+                            var WWW = typeof forma.website !== 'undefined' ? forma.website.value.replace(" ", "") : '';
+                            var Email = typeof forma.email !== 'undefined' ? forma.email.value.replace(" ", "") : '';
+                            var city = typeof forma.city !== 'undefined' ? forma.city.value.replace(" ", "") : '';
+                            var postcode = typeof forma.postcode !== 'undefined' ? forma.postcode.value.replace(" ", "") : '';
+                            var street = typeof forma.street !== 'undefined' ? forma.street.value.replace(" ", "") : '';
+                            var house = typeof forma.housenumber !== 'undefined' ? forma.housenumber.value.replace(" ", "") : '';
+                            var houseSuffix = typeof forma.housenumberaffix !== 'undefined' ? forma.housenumberaffix.value.replace(" ", "") : '';
+                            var registerid = typeof forma.registerid !== 'undefined' ? forma.registerid.value.replace(" ", "") : '';
+
+                            var values = [company, identificationnumber, diallingcode, phonenumber, WWW, Email, city, postcode, street, house, houseSuffix, registerid];
+
+
+                            if (IsEmpty(values)) {
+                                alert('Bent vienas iš laukų neturi būti tuščias');
+                                return false;
+                            }
+
+                            var values = [company, identificationnumber, diallingcode, phonenumber, WWW, Email, city, postcode, street];
+                            if (IsShort(values)) {
+                                alert('Bent vienas iš laukų neturi būti trumpesnis nei 2 simboliai (neskaičiuojant tarpų ir *)');
+                                return false;
+                            }
+                            if (!isCrefoNr(identificationnumber)) {
+                                alert("Company code should have only the number 11");
+                                return false;
+                            }
+
+                            if (Email.length > 0 && !validateEmail(Email)) {
+                                alert("bad El. paštas");
+                                return false;
+                            }
+
+                            if (WWW.length > 0 && !ValidURL(WWW)) {
+                                alert("bad Interneto puslapis");
+                                return false;
+                            }
+
+
+                            return true;
+                        }
+
+
+                        
+                        function validateEmail(email) {
+                            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                            return re.test(email);
+                        }
+
+                        function ValidURL(str) {
+                            var pattern = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-]*)?\??(?:[\-\+=&;%@\.\w]*)#?(?:[\.\!\/\\\w]*))?)/g;
+                            if (!pattern.test(str)) {
+                                return false;
+                            } else {
+                                return true;
+                            }
+                        }
+                        
+
+                        function IsEmpty(array) {
+                            for (var i = 0; i < array.length; i++)
+                                if (array[i] != '')
+                                    return false;
+                            return true;
+                        }
+
+                        function IsShort(array) {
+                            for (var i = 0; i < array.length; i++)
+                                if (array[i].length < 2 && array[i].length != 0)
+                                    return true;
+                            return false;
+                        }
+
+                        function isCrefoNr(value) {
+
+                            if (value.length == 0) return true;
+                            if (!isInteger(value)) return false;
+                            if (value.length < 5 || value.length > 21) return false;
+                            return true;
+
+                        }
+
+                        function isInteger(x) {
+                            return $.isNumeric(x);
+                        }
+
+                        function validate_search(forma) {
+                            var Company = forma.Company.value.replace(" ", "");
+                            var Trademark = forma.Trademark.value.replace(" ", "");
+
+                            var Person = forma.Person.value.replace(" ", "");
+                            var City = forma.City.value.replace(" ", "");
+                            var Street = forma.Street.value.replace(" ", "");
+                            var PhoneCode = forma.PhoneCode.value.replace(" ", "");
+                            var Phone = forma.Phone.value.replace(" ", "");
+                            var FaxCode = forma.FaxCode.value.replace(" ", "");
+                            var Fax = forma.Fax.value.replace(" ", "");
+                            var CellCode = forma.CellCode.value.replace(" ", "");
+                            var Cell = forma.Cell.value.replace(" ", "");
+                            var Email = forma.Email.value.replace(" ", "");
+                            var WWW = forma.WWW.value.replace(" ", "");
+                            var PVM = forma.PVM.value.replace(" ", "");
+
+                            if (Company == '' && Person == '' && Trademark == '' && City == '' && Street == '' && Email == ''
+                                && WWW == '' && PhoneCode == '' && Phone == '' && FaxCode == '' && Fax == '' && CellCode == '' && Cell == '' && PVM == '') {
+                                alert('Bent vienas iš laukų neturi būti tuščias');
+                                return false;
+                                }
+                            if (Company.length < 3 && Trademark.length < 2 && Person.length < 2 && City.length < 2 && Street.length < 2
+                                && Phone.length < 5 && Fax.length < 5 && CellCode.length < 3 && Cell.length < 5 && Email.length < 3 && WWW.length < 3 && PVM.length < 3) {
+                                alert('Bent vienas iš laukų neturi būti trumpesnis nei 2 simboliai (neskaičiuojant tarpų ir *)');
+                                return false;
+                                }
+                            if (PhoneCode == '' && Phone != '') {
+                                aktyvus = forma.PhoneCode;
+                                aktyvus.focus();
+                                alert('Numerio kodas negali būti tuščias');
+                                return false;
+                                }
+                            if (FaxCode == '' && Fax != '') {
+                                aktyvus = forma.FaxCode;
+                                aktyvus.focus();
+                                alert('Numerio kodas negali būti tuščias');
+                                return false;
+                                }
+                            if (PhoneCode != '' && !phone_codes.inArray(PhoneCode)) {
+                                aktyvus = forma.PhoneCode;
+                                aktyvus.focus();
+                                alert('Nėra tokio numerio kodo');
+                                return false;
+                                }
+                            if (FaxCode != '' && !phone_codes.inArray(FaxCode)) {
+                                aktyvus = forma.FaxCode;
+                                aktyvus.focus();
+                                alert('Nėra tokio numerio kodo');
+                                return false;
+                                }
+
+                            
+                            return true;
+                            }
+
+                        
+                        var submited = false;
+
+                        function submitas_search(forma) {
+                            if (submited) return false;
+                            submited = true;
+
+                            if (forma.country.value == 'LT' || forma.country.value == '' || forma.country == null) {
+                                if (validate_search(forma)) {
+                                    submited = true;
+                                    //forma.screen_resolution.value = screen.width + 'x' + screen.height;
+                                    forma.submit();
+                                    return true;
+                                }
+                            } else {
+                                if (validate_searchBignet(forma)) {
+                                    submited = true;
+                                    //forma.screen_resolution.value = screen.width + 'x' + screen.height;
+                                    forma.submit();
+                                }
+                            }
+                            submited = false;
+                            return false;
+                        }
+
+                        function clearForm(theForm) {
+                            with (theForm) {
+                                if (typeof Company !== 'undefined') Company.value = '';
+                                if (typeof Trademark !== 'undefined') Trademark.value = '';
+                                if (typeof ieskoti_ist_pavad !== 'undefined') ieskoti_ist_pavad.checked = true;
+                                if (typeof ieskoti_trademark !== 'undefined') ieskoti_trademark.checked = false;
+                                if (typeof Person !== 'undefined') Person.value = '';
+                                if (typeof City !== 'undefined') City.value = '';
+                                if (typeof Street !== 'undefined') Street.value = '';
+                                if (typeof House !== 'undefined') House.value = '';
+                                if (typeof PhoneCode !== 'undefined') PhoneCode.value = '';
+                                if (typeof Phone !== 'undefined') Phone.value = '';
+                                if (typeof FaxCode !== 'undefined') FaxCode.value = '';
+                                if (typeof Fax !== 'undefined') Fax.value = '';
+                                if (typeof CellCode !== 'undefined') CellCode.value = '';
+                                if (typeof Cell !== 'undefined') Cell.value = '';
+                                if (typeof Email !== 'undefined') Email.value = '';
+                                if (typeof WWW !== 'undefined') WWW.value = '';
+                                if (typeof PVM !== 'undefined') PVM.value = '';
+                                if (typeof identificationnumber !== 'undefined') identificationnumber.value = '';
+                                if (typeof diallingcode !== 'undefined') diallingcode.value = '';
+                                if (typeof phonenumber !== 'undefined') phonenumber.value = '';
+                                if (typeof website !== 'undefined') website.value = '';
+                                if (typeof email !== 'undefined') email.value = '';
+                                if (typeof postcode !== 'undefined') postcode.value = '';
+                                if (typeof HouseSuffix !== 'undefined') HouseSuffix.value = '';
+                            }
+                        }
+
+                        function selectPCode(kodas) {
+                            aktyvus.value = kodas;
+                            aktyvus.focus();
+                        }
+
+                        function setSearchVisibility(element, view, akt) {
+                            var n = GetByID(element);
+                            var m = GetByID('span_last_search');
+                            aktyvus = akt;
+
+                            n.style.display = view;
+
+                            if (view == 'inline') {
+                                m.style.display = 'none';
+                            } else {
+                                m.style.display = 'inline';
+                            }
+                        }
+                        
+                    </script>
+                
+            </div>
+        </div>
+        
+        <div id="UserInfoFlex">
+            
+            <table cellspacing="0" cellpadding="3" align="right">
+                <tbody><tr style="display: table;">
+                                        <td class="melyna" style="width: auto;">
+                                                    <script type="text/javascript">
+function login_k(elementas,event) {
+	if ((document.all && event.keyCode=="13") ||
+	(document.getElementById && event.which=="13")) {
+		forma = elementas.form;
+		forma.page_login.value='login';
+		forma.submit();
+	}
+}
+</script>
+
+<form name="m1" action="https://www.cr.lt/" method="POST" style="padding:0;margin:0;">
+<input type="hidden" name="page_login" value="">
+<table border="0" style="padding:0; margin:0;">
+	<tbody><tr>
+		<td rowspan="3" style="vertical-align: bottom;white-space: nowrap">
+            <span class="cart_div" style="display:none;            cursor:pointer;display:none;" onclick="
+     			 window.location = '/imones/n/noriu/cart/'
+     			 ">
+  <img src="/img_cr/cart2_white.gif" alt="įmonės Prekių krepšelis" class="middle center">&nbsp;Prekių krepšelis&nbsp;<b>0 Eur</b>
+</span>
+		</td>
+		<td valign="top" style="padding:0; margin:0;" nowrap="">Vartotojo vardas&nbsp;</td>
+		<td style="padding:0; margin:0; text-align: right;">
+			<input tabindex="1" type="text" class="txt" name="ClientId" style="width:100px;font-size:8pt;" value="">
+		</td>
+		<td style="padding:0; margin:0;">
+		&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" style="padding:0; margin:0;" nowrap="">Slaptažodis&nbsp;</td>
+		<td style="padding:0; margin:0; text-align: right;">
+			<input tabindex="2" type="password" name="ClientPassw" class="txt" style="width:100px;font-size:8pt;" value="" onkeypress="login_k(this,event)">
+		</td>
+		<td>
+			<a href="/imones/n/noriu/remind_pwd/" onmouseover="evnt.showNearElement('rpwd','Pamiršau slaptažodį',this,'bottom',5)"><img src="/img_cr/reset-pass2.png" alt="Pamiršau slaptažodį"></a>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" style="padding:0; margin:0;" nowrap=""><a class="blue" href="/imones/n/noriu/registracija1/">Registracija</a></td>
+		<td colspan="2" style="padding:0; margin:0; text-align: left;">
+			<input type="button" value="Prisijungti" class="btn btn-primary" style="font-size:8pt;" onclick="this.form.page_login.value='login'; this.form.submit()"><br>
+		</td>
+	</tr>
+</tbody></table>
+</form>
+
+                                                                                                                    </td>
+                </tr>
+
+            </tbody></table>
+            <div class="userOptions">
+
+                            </div>
+        </div>
+</div>
+    </div>
+    <div class="kalbos">
+        <marquee style="color: #FFF;">Jau on-line! Trumposios ataskaitos apie Europos įmones. Svarbiausia info verslo sprendimams</marquee>
+        <a href="/imones/"><img src="/img/lang-lt.gif" alt="LT" class="middle" title="LT"></a>
+        <a href="/en/"><img src="/img/lang-en.gif" alt="EN" class="middle" title="EN"></a>
+    </div>
+
+    <div id="menuAndContent">
+        <div class="sidemanuresponsive" style="min_width:200px; width: auto;height: auto;"> <div style="width: 100%"><div id="main-menu" style="top: 163px;">
+    <ul>
+                    <li class="close">
+                                    <span onclick="my_services(this)" style="cursor : pointer">
+						    Galiu užsisakyti
+                        <img id="my_service_img" src="/img_cr/arrow_bottom_white_b.png">				    </span>
+                                                    <ul>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/uzklausa/ref/ataskaita/">
+                                        Kreditinę ataskaitą
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/transport_paieska/">
+                                        Transporto priemonės paieška
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/monitoringas/">
+                                        Informacijos monitoringą
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/cr_paslauga/">
+                                        CR reitingo paslaugą
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/imk/">
+                                        IMK paslaugą
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a href="/imones/n/noriu/uzklausa/ref/atranka/">
+                                        Klientų sąrašą
+                                    </a>
+                                                                                            </li>
+                                                    <li id="portfelis">
+                                                                    <span class=" disabled" onclick="openMenu2('portfelis')">Dirbti su klientų portfeliu</span>
+                                                                                                    <ul>
+                                                                                    <li><a class=" disabled" href="/imones/n/noriu/uzklausa/ref/kredito-limitas/">Nustatyti kredito limitus</a>
+                                            </li>
+                                                                                    <li><a class=" disabled" href="/imones/n/noriu/uzklausa/ref/rizikingumas/">Įvertinti klientų rizikingumą</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                            </ul>
+                            </li>
+                    <li class="close">
+                                    <span class=" disabled" onclick="my_services(this)" style="cursor : pointer">
+						    Užsienio įmonių paslaugos
+                        <img id="my_service_img" src="/img_cr/arrow_bottom_white_b.png">				    </span>
+                                                    <ul>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/uzklausa/ref/uzsienio-ataskaitos/">
+                                        Užsakyti kreditinę ataskaitą
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/uzklausa/ref/uzsienio-skolos/">
+                                        Perduoti skolą išieškojimui
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/uzklausa/ref/uzsienio-atranka/">
+                                        Atrinkti įmones
+                                    </a>
+                                                                                            </li>
+                                            </ul>
+                            </li>
+                    <li class="close">
+                                    <span onclick="my_services(this)" style="cursor : pointer">
+						    Atsiskaitymų kontrolė
+                        <img id="my_service_img" src="/img_cr/arrow_bottom_white_b.png">				    </span>
+                                                    <ul>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/new_delay/">
+                                        Paskelbti vėlavimą
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/inkasso/">
+                                        Perduoti skolą išieškojimui
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/debts_for_sale/newdebt/new/">
+                                        Parduoti skolą
+                                    </a>
+                                                                                            </li>
+                                            </ul>
+                            </li>
+                    <li class="close">
+                                    <span onclick="my_services(this)" style="cursor : pointer">
+						    Kita
+                        <img id="my_service_img" src="/img_cr/arrow_bottom_white_b.png">				    </span>
+                                                    <ul>
+                                                    <li>
+                                                                    <a class=" disabled" href="/imones/n/noriu/uzklausa/ref/asociacija/">
+                                        Asociacijų modulis
+                                    </a>
+                                                                                            </li>
+                                                    <li>
+                                                                    <a href="/imones/n/noriu/kvk/">
+                                        KVK
+                                    </a>
+                                                                                            </li>
+                                            </ul>
+                            </li>
+                    <li class="close">
+                                    <a href="/imones/n/noriu/DIX/">Darbdavių skolos indeksas DIX</a>
+                                            </li>
+                    <li class="close">
+                                    <a style="color: red" href="/nemokumas" target="_blank">Nemokumo Vertinimo Sistema</a>
+				                            </li>
+                    <li class="close">
+                                    <a href="/pagalba/sankcijos" target="_blank">Sankcijos</a>
+                                            </li>
+            </ul>
+    
+
+            <div id="imk_ad">
+            <a href="/imones/n/noriu/imk/" style="background:none; margin:0; padding:0;"><img src="/img_cr/imk_logo.png" alt="IMK" title="Informacija maža kaina"></a>
+        </div>
+    
+            <div id="stabilus_ad" style="display: none; margin: 5px 0px; width: 180px; padding: 0px 10px;">
+            <a href="/pagalba/crefocert" target="cr_pagalba" style="background:none; margin:0; padding:0;"><img src="/img_cr/stabilus_ad.jpg" alt="Stabilus.lt" title="Ar jau turi STABILUS sertifikatą?"></a>
+        </div>
+    
+</div>
+
+
+
+
+ </div></div>
+                            
+                    
+                
+                        
+                
+                    <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+
+<script type="text/javascript">
+	$(function() {$(".description").css("display","none");$(".pirmas").css("display","none");$(".antras").css("display","none");});
+	function press1(elem){
+		$(".description").css("display","block");
+		elem.style.display='none';
+	};
+</script>
+
+<style>
+    .slick-vertical .slick-slide{
+
+        height: 25rem!important;
+    }
+
+    </style>
+
+<main id="main" role="main">
+    <div class="cid656">
+        <a id="c656"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="c650" class=" foreground frame-padding-after30">
+                        <div class="teasers-block row">
+                            <div class="col-12 col-lg-4">
+
+
+
+                                <div class="cid819 frame-space-after50">
+                                    <a id="c819"></a><!--TYPO3SEARCH_end-->
+                                    <div class="news-list-view news-holder" id="news-container-819">
+
+                                        <div class="news teaser-view">
+
+                                            <!--
+                                               =====================
+                                                   Partials/List/Item.html
+                                               -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <!--
+                                               =====================
+                                                   Partials/List/Item.html
+                                               -->
+
+                                            <div class="article articletype-0" itemscope="itemscope" itemtype="http://schema.org/Article">
+                                                <h2 class="h2">Naujienos</h2>
+                                                <span itemprop="author" content="Creditreform"></span><span itemprop="image"></span><span itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><span itemprop="name" content="Creditreform"></span><span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><span itemprop="url" content="https://www.creditreform.de/assets/images/logo.svg"></span></span></span>
+                                                <span class="date">
+                                       <time datetime="2023-09-12">
+                                          2023-09-12
+                                       </time>
+                                    </span>
+                                                <div class="title">Šiandien (2023-09-12) duomenų bazėje:</div>
+                                                <ul class="stat">
+                                                                                                        <li>Įmonių (iš viso) - <span class="bold">496529</span>
+                                                                                                            </li><li>Veikiančių įmonių - <span class="bold">204217</span>
+                                                                                                            </li><li>Šiemet registruotų įmonių - <span class="bold">11357</span>
+                                                                                                            </li><li>Įmonių, registruotų PVM mokėtojais - <span class="bold">82653</span>
+                                                                                                            </li><li>Viso internetinių puslapių - <span class="bold">227066</span>
+                                                                                                            </li><li>Viso paskaičiuota CR reitingų - <span class="bold">223880</span>
+                                                                                                            </li><li>Įmonių, kurios turi hipotekos ar areštų - <span class="bold">67921</span>
+                                                                                                        </li></ul>
+                                            </div>
+                                            <!--
+                                               =====================
+                                                   Partials/List/Item.html
+                                               -->
+                                            <div class="article articletype-0" itemscope="itemscope" itemtype="http://schema.org/Article">
+                                                    <div id="carouselblocks" class="slick-initialized slick-slider slick-vertical">
+                                                <div aria-live="polite" class="slick-list" style="height: 400px;"><div class="slick-track" role="listbox" style="opacity: 1; height: 3200px; transform: translate3d(0px, -400px, 0px);"><div class="home_block hide slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 158px;">
+                                                    <div class="title">Naujausios bankroto bylos</div>
+                                                    <ul class="tops" id="">
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Asociacija-Eeee/noriu/kontaktai/info/427978/statipas/bankrot/" tabindex="-1">EEEE, ASOCIACIJA</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-UAB-Liskandas/noriu/kontaktai/info/111176/statipas/bankrot/" tabindex="-1">LISKANDAS, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Agart/noriu/kontaktai/info/1091647/statipas/bankrot/" tabindex="-1">Agart, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Komensa/noriu/kontaktai/info/394237/statipas/bankrot/" tabindex="-1">Komensa, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Sobekas/noriu/kontaktai/info/540985/statipas/bankrot/" tabindex="-1">Sobekas, UAB</a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div><div class="home_block hide slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 158px;">
+                                                    <div class="title">Per paskutinį mėnesį labiausiai domėtasi</div>
+                                                    <ul class="tops" id="carousel-1">
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Onlychain-Fintech-Limited/noriu/kontaktai/info/1258365/statipas/idom/" tabindex="0">Onlychain Fintech Limited, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Eurlita/noriu/kontaktai/info/1211006/statipas/idom/" tabindex="0">Eurlita, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Lietuvos-Ir-Vokietijos-UAB-Lirema/noriu/kontaktai/info/5306/statipas/idom/" tabindex="0">LIREMA, Lietuvos ir Vokietijos UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Finstrax-Uab/noriu/kontaktai/info/1321174/statipas/idom/" tabindex="0">Finstrax UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Rionas/noriu/kontaktai/info/351251/statipas/idom/" tabindex="0">Rionas, UAB</a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div><div class="home_block hide slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 158px;">
+                                                    <div class="title">Naujausi komentarai</div>
+                                                    <ul class="tops" id="carousel-2">
+                                                                                                                    <li>
+                                                                <div>
+                                                                    -                                                                    <a href="/imones/imone-Uab-Sobekas/noriu/komentarai/info/540985/statipas/koment/" tabindex="-1">Sobekas, UAB</a>
+                                                                </div>
+                                                            </li>
+                                                                                                                    <li>
+                                                                <div>
+                                                                    -                                                                    <a href="/imones/imone-UAB-Liskandas/noriu/komentarai/info/111176/statipas/koment/" tabindex="-1">LISKANDAS, UAB</a>
+                                                                </div>
+                                                            </li>
+                                                                                                                    <li>
+                                                                <div>
+                                                                    -                                                                    <a href="/imones/imone-Asociacija-Eeee/noriu/komentarai/info/427978/statipas/koment/" tabindex="-1">EEEE, ASOCIACIJA</a>
+                                                                </div>
+                                                            </li>
+                                                                                                                    <li>
+                                                                <div>
+                                                                    -                                                                    <a href="/imones/imone-Mb-Brigandra/noriu/komentarai/info/1133132/statipas/koment/" tabindex="-1">Brigandra, MB</a>
+                                                                </div>
+                                                            </li>
+                                                                                                                    <li>
+                                                                <div>
+                                                                    -                                                                    <a href="/imones/imone-UAB-Restinis-Bustas/noriu/komentarai/info/190539/statipas/koment/" tabindex="-1">Ręstinis būstas, UAB</a>
+                                                                </div>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div><div class="home_block hide slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 158px;">
+                                                    <div class="title">Naujausi įvesti vėlavimai</div>
+                                                    <ul class="tops" id="carousel-3">
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Fortegija/noriu/velavimai/info/709556/statipas/velavimai/" tabindex="-1">Fortegija, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Adomo-Baldai/noriu/velavimai/info/610264/statipas/velavimai/" tabindex="-1">Adomo baldai, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Polimaster-Property/noriu/velavimai/info/602541/statipas/velavimai/" tabindex="-1">Polimaster Property, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Eastern-Wood/noriu/velavimai/info/438268/statipas/velavimai/" tabindex="-1">Eastern Wood, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Emro-Invest/noriu/velavimai/info/434004/statipas/velavimai/" tabindex="-1">EMRO INVEST, UAB</a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div><div class="home_block hide slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 158px;">
+                                                    <div class="title">Daugiausiai darbuotojų turi</div>
+                                                    <ul class="tops" id="carousel-4">
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Maxima-Lt-Uab/noriu/kontaktai/info/37926/statipas/dsk/" tabindex="-1">MAXIMA LT, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Lietuvos-Sveikatos-Mokslu-Universiteto-Ligonine-Kauno-Klinikos/noriu/kontaktai/info/90926/statipas/dsk/" tabindex="-1">Lietuvos sveikatos mokslų universiteto ligoninė Kauno klinikos</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Viesoji-Istaiga-Vilniaus-Universiteto-Ligonine-Santaros-Klinikos/noriu/kontaktai/info/48587/statipas/dsk/" tabindex="-1">Vilniaus universiteto ligoninė Santaros klinikos, VŠĮ</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Iki-Lietuva-Uab/noriu/kontaktai/info/1036/statipas/dsk/" tabindex="-1">IKI Lietuva, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Vilniaus-Universitetas/noriu/kontaktai/info/10343/statipas/dsk/" tabindex="-1">Vilniaus universitetas</a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div><div class="home_block hide slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide04" style="width: 158px;">
+                                                    <div class="title">Daugiausia skolų turi</div>
+                                                    <ul class="tops" id="carousel-5">
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Termofonas/noriu/kontaktai/info/85572/statipas/skolos/" tabindex="-1">Termofonas, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-UAB-Ad-Infinitum/noriu/kontaktai/info/53452/statipas/skolos/" tabindex="-1">AD INFINITUM, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-UAB-Krola/noriu/kontaktai/info/200708/statipas/skolos/" tabindex="-1">Krola, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-R-Vilcinskienes-Ii-Abora/noriu/kontaktai/info/248573/statipas/skolos/" tabindex="-1">ABORA, R. Vilčinskienės IĮ</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Stanislovo-Cesonio-Imone/noriu/kontaktai/info/177931/statipas/skolos/" tabindex="-1">Stanislovo Česonio įmonė</a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div><div class="home_block hide slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide05" style="width: 158px;">
+                                                    <div class="title">Naujausios bankroto bylos</div>
+                                                    <ul class="tops" id="carousel-6">
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Asociacija-Eeee/noriu/kontaktai/info/427978/statipas/bankrot/" tabindex="-1">EEEE, ASOCIACIJA</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-UAB-Liskandas/noriu/kontaktai/info/111176/statipas/bankrot/" tabindex="-1">LISKANDAS, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Agart/noriu/kontaktai/info/1091647/statipas/bankrot/" tabindex="-1">Agart, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Komensa/noriu/kontaktai/info/394237/statipas/bankrot/" tabindex="-1">Komensa, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Sobekas/noriu/kontaktai/info/540985/statipas/bankrot/" tabindex="-1">Sobekas, UAB</a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div><div class="home_block hide slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 158px;">
+                                                    <div class="title">Per paskutinį mėnesį labiausiai domėtasi</div>
+                                                    <ul class="tops" id="">
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Onlychain-Fintech-Limited/noriu/kontaktai/info/1258365/statipas/idom/" tabindex="-1">Onlychain Fintech Limited, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Eurlita/noriu/kontaktai/info/1211006/statipas/idom/" tabindex="-1">Eurlita, UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Lietuvos-Ir-Vokietijos-UAB-Lirema/noriu/kontaktai/info/5306/statipas/idom/" tabindex="-1">LIREMA, Lietuvos ir Vokietijos UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Finstrax-Uab/noriu/kontaktai/info/1321174/statipas/idom/" tabindex="-1">Finstrax UAB</a>
+                                                            </li>
+                                                                                                                    <li>
+                                                                -                                                                <a href="/imones/imone-Uab-Rionas/noriu/kontaktai/info/351251/statipas/idom/" tabindex="-1">Rionas, UAB</a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div></div></div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </div>
+                                                    <script type="text/javascript">
+                                                        $('#carouselblocks').slick({
+                                                            infinite: true,
+                                                            slidesToShow: 1,
+                                                            slidesToScroll: 1,
+                                                            autoplay: true,
+                                                            autoplaySpeed: 5000,
+                                                            speed: 1000,
+                                                            arrows: false,
+                                                            vertical: true,
+                                                            dots: false,
+                                                            draggable: false,
+                                                            pauseOnHover: true,
+
+
+
+                                                        })
+                                                    </script>
+
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-12 col-lg-4">
+                                <div class="foreground  visual-article shadow-lg tile dark-style  frame-space-after30" "="">
+                                    <div class="bg-stretch" id="bg-stretch1614337945719249"></div>
+                                    <div class="content-wrapper">
+                                        <h2 class=" h2">
+                                           Nemokumo Vertinimo Sistema
+
+                                        </h2>
+                                    </div>
+                                    <div class="link-area"><a href="/nemokumas/naujienos.php" title="Nemokumo vertinimas" class="btn-link light icon-right">
+                                           Nemokumo vertinimas<span class="lnr lnr-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                                <div class=" visual-article-2 frame-space-before0 frame-space-after50 shadow-lg frame-layout-0 frame-padding-before0 frame-padding-after0">
+
+                                    <div class="visual-article-2 frame-space-before0 frame-space-after0 shadow-lg frame-layout-0 frame-padding-before0 frame-padding-after0">
+                                        <div class="img-wrapper">
+                                            <a href="/nemokumas/pranesimai.php" title="Nemokumo pranesimai">
+                                                <picture>
+                                                    <img src="/img_cr/csm_creditreform-newsfeed-elearning-355x320_e70ea7130d.png" title="Nemokumas" alt="nemokumo pranesimai">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                        <div class="article-body news withLink">
+                                            <h2 class="h3">
+                                                Nemokumo pranešimas
+                                            </h2>
+
+                                            
+                                            <ul>
+                                                
+                                                    <li class="pran-list"> <a href="/nemokumas/pranesimai.php#pran_253">Dendrus, UAB</a>   </li>
+
+                                                
+                                                    <li class="pran-list"> <a href="/nemokumas/pranesimai.php#pran_252">Smetonos klubas, UAB</a>   </li>
+
+                                                
+                                                    <li class="pran-list"> <a href="/nemokumas/pranesimai.php#pran_251">Smetonos klubas, UAB</a>   </li>
+
+                                                
+                                                    <li class="pran-list"> <a href="/nemokumas/pranesimai.php#pran_250">Gelu, MB</a>   </li>
+
+                                                
+                                                    <li class="pran-list"> <a href="/nemokumas/pranesimai.php#pran_249">Vipresta, UAB</a>   </li>
+
+                                                                                            </ul>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+
+                                            <a href="/nemokumas/pranesimai.php" title="Nemokumasn" class="btn-link icon-right">
+                                                Rodyti daugiau<span class="lnr lnr-arrow-right"></span></a>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="visual-article-2 frame-space-before0 frame-space-after0 shadow-lg frame-layout-0 frame-padding-before0 frame-padding-after0">
+                                    <div class="img-wrapper" id="crvartotojaiImg">
+                                        <div class="home-head"><a href="/imones/n/noriu/imk-narys/">CR.lt vartotojai apie savo klientus žino DAUGIAU</a></div>
+
+                                        
+                                    </div>
+                                    <div class="article-body news withLink paslaugos" style="padding: 0!important; margin-top:0!important;">
+                                        <ul class="home-menu2 marketing" style="padding: 0!important; margin-top:0!important;">
+                                            <li class="head marketing" onclick="openCloseThis('marketing')">Marketingui</li>
+                                            <li class="s" onclick="openCloseBlock('marketing-more1')">Tikslinės klientų atrankos <span class="linkas">➤</span></li>
+                                            <li class="p" onclick="openCloseBlock('marketing-more2')">Kontaktų, registracinės, kreditingumo ir rizikingumo informacijos pateikimas <span class="linkas">➤</span></li>
+                                            <li class="s" onclick="openCloseBlock('marketing-more3')">Klientų portfelio duomenų atnaujinimas <span class="linkas">➤</span></li>
+                                        </ul>
+                                        <ul class="home-menu2 border">
+                                            <li id="marketing-more1" class="s" style="display: none;"><label><img src="/img_cr/icon_demo_2.gif">Tikslinės klientų atrankos</label><div>Atrenkame <a href="/imones/n/noriu/uzklausa/ref/atranka/">įmones Lietuvoje</a> ir <a href="/imones/n/noriu/uzklausa/ref/uzsienio-atranka/">užsienyje</a> pagal Jūsų pasirinktus kriterijus ir pateikiame Jums aktualius duomenis.<br><br>Bendroje Lietuvos, Latvijos ir Estijos įmonių kontaktų bazėje <a target="euromarketdb" href="http://www.euromarketdb.lt">„euroMARKETdb“</a> Jūs galite patys pagal įvairius kriterijus atsirinkti įmones ir gauti Jums aktualią informaciją.</div></li>
+                                            <li id="marketing-more2" class="p" style="display: none;"><label><img src="/img_cr/icon_demo_2.gif">Kontaktų, registracinės, kreditingumo ir rizikingumo informacijos pateikimas</label><div>Atrinkę įmones ar pagal Jūsų atsiųstą įmonių kodų sąrašą pateikiame prie kiekvienos įmonės Jūsų pasirinktus duomenis (pvz., tikslius kontaktus, vadovą, apyvartą, darbuotojų skaičių, teismus ir pan.).</div></li>
+                                            <li id="marketing-more3" class="s" style="display: none;"><label><img src="/img_cr/icon_demo_2.gif">Klientų portfelio duomenų atnaujinimas</label><div>Pagal pateiktą įmonių kodų sąrašą atnaujiname įmonių kontaktinę, registracinę, rizikingumo bei kreditingumo informaciją.</div></li>
+                                        </ul>
+
+                                        <ul class="home-menu2 risk">
+                                            <li class="head risk" onclick="openCloseThis('risk')">Kredito rizikos vertinimui</li>
+                                            <li class="p" onclick="openCloseBlock('risk-more1')">Savarankiška įmonių analizė www.cr.lt <span class="linkas">➤</span></li>
+                                            <li class="p" onclick="openCloseBlock('risk-more2')">Įmonių reitingavimas, kredito limitų nustatymas, rizikos analizė <span class="linkas">➤</span></li>
+                                            <li class="p" onclick="openCloseBlock('risk-more3')">Ankstyvi pavojaus signalai: įmonių būklės stebėsena <span class="linkas">➤</span></li>
+                                        </ul>
+                                        <ul class="home-menu2 border">
+                                            <li id="risk-more1" class="s" style="display: none;"><label><img src="/img_cr/icon_demo_3.gif">Savarankiška įmonių analizė www.cr.lt</label><div>www.cr.lt pateikiame visą Lietuvos įmonių informaciją: nuo registracinės iki www.cr.lt vartotojų komentarų.</div></li>
+                                            <li id="risk-more2" class="s" style="display: none;"><label><img src="/img_cr/icon_demo_3.gif">Įmonių reitingavimas, kredito limitų nustatymas, rizikos analizė</label><div>Tiesiogiai www.cr.lt <a href="/imones/n/noriu/cr_paslauga/">reitinguojame įmones</a>, skaičiuodami finansinių įsipareigojimų nevykdymo per paskutinius 12 mėn. tikimybę.<br><br><a href="/imones/n/noriu/uzklausa/ref/kredito-limitas/">Nustatome įmonėms kredito limitus</a> ar norimo suteikti kredito limito patvirtinimą/ atmetimą pagal Jūsų atsiųstą įmonių kodų sąrašą.<br><br>Pateikiame pagal Jūsų atsiųstą įmonių kodų sąrašą <a href="/imones/n/noriu/uzklausa/ref/rizikingumas/">įmonių vertinimą ir rizikos faktorius</a>.<br><br>Ruošiame pilnas kreditines ataskaitas apie <a href="/imones/n/noriu/uzklausa/ref/atranka/">įmones Lietuvoje</a> bei <a href="/imones/n/noriu/uzklausa/ref/uzsienio-atranka/">užsienyje</a>: pateikiame naujausią informaciją apie įmonę, kredito analitiko išvadą bei rekomenduojamą kredito limitą.</div></li>
+                                            <li id="risk-more3" class="s" style="display: none;"><label><img src="/img_cr/icon_demo_3.gif">Ankstyvi pavojaus signalai: įmonių būklės stebėsena</label><div>Kasdien <a href="/imones/n/noriu/monitoringas/">informuojame el. paštu</a> apie Jus dominančių įmonių būklės (teismus, fiksuotus vėlavimus, darbuotojų skaičiaus pokyčius ir pan.) pasikeitimus.</div></li>
+                                        </ul>
+
+                                        <ul class="home-menu2 debts">
+                                            <li class="head debts" onclick="openCloseThis('debts')">Skolų valdymui</li>
+                                            <li class="s" onclick="openCloseBlock('debts-more1')">Skolų porfelio vertinimas <span class="linkas">➤</span></li>
+                                            <li class="p" onclick="openCloseBlock('debts-more2')">Priminimai, ikiteisminis ir teisminis išieškojimas <span class="linkas">➤</span></li>
+                                            <li class="s" onclick="openCloseBlock('debts-more3')">Skolų pirkimas <span class="linkas">➤</span></li>
+                                        </ul>
+                                        <ul class="home-menu2 border" style="border-bottom: 1px solid #efefef">
+                                            <li id="debts-more1" class="s" style="display: none;"><label><img src="/img_cr/icon_demo_4.gif">Skolų porfelio vertinimas</label><div>Vertiname skolos/-ų išieškojimo galimybes iš Lietuvos ir užsienio įmonių.</div></li>
+                                            <li id="debts-more2" class="p" style="display: none;"><label><img src="/img_cr/icon_demo_4.gif">Priminimai, ikiteisminis ir teisminis išieškojimas</label><div>Siunčiame priminimus Jūsų skolininkams elektroininiu, paprastu ar registruotu paštu.<br><br>Viešai www.cr.lt <a href="/imones/n/noriu/velavimai/">skelbiame</a> įvairių kreditorių vėlavimus. <a href="/imones/n/noriu/new_delay/">Paskelbkite</a> vėluojantį atsiskaityti klientą ir Jūs!<br><br>Vykdome išieškojimą iš <a href="/imones/n/noriu/inkasso/">Lietuvos</a> ir <a href="/imones/n/noriu/uzklausa/ref/uzsienio-skolos/">užsienio įmonių</a>.</div></li>
+                                            <li id="debts-more3" class="s" style="display: none;"><label><img src="/img_cr/icon_demo_4.gif">Skolų pirkimas</label><div>Pagal atskirus susitarimus perkame skolas.</div></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+    <script type="text/javascript">
+        $(function() {
+            $("#marketing-more1").css("display","none");$("#marketing-more2").css("display","none");$("#marketing-more3").css("display","none");
+            $("#risk-more1").css("display","none");$("#risk-more2").css("display","none");$("#risk-more3").css("display","none");
+            $("#debts-more1").css("display","none");$("#debts-more2").css("display","none");$("#debts-more3").css("display","none");
+            $('#stabilus_ad').css('display', 'none');
+        });
+        function openCloseThis(elem){
+            var displ = 'none';
+            $("li[id|= '"+elem+"']").each(
+                function(i){if(this.style.display == 'none'){displ = 'block';}}
+            )
+            $("li[id|= '"+elem+"']").each(
+                function(i){this.style.display = displ;}
+            )
+        }
+    </script>
+
+
+
+                            
+    </div>
+
+    </div>
+
+
+
+
+<div> </div>
+
+
+
+
+<div> </div>
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript" src="/js_cr/wz_tooltip.js"></script>
+
+
+
+
+<footer id="footer" class=""> 
+    <div class="container">
+        <div class="row accordion footer-nav" id="accordionFooterNav">
+            <div class="col-12 col-md-6 col-xl-3 collapse-decor mb-md-5 mb-xl-0">
+                <h4 class="h4 opener collapsed" data-toggle="collapse" data-target="#collapse177" aria-expanded="true" aria-controls="collapse1"><a href="/imones/n/noriu/nemokumas/">Nemokumo pranešimai</a><i class="chevron-down"></i></h4>
+                <div id="collapse177" class="" data-parent="#accordionFooterNav">
+                    <ul class="footer-menu">
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/nemokumas/imone/Uab-Dendrus/code/301901538/" onclick="count_clicks('nemokumas');">
+                                    Dendrus, UAB
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/nemokumas/imone/Uab-Smetonos-Klubas/code/304787958/" onclick="count_clicks('nemokumas');">
+                                    Smetonos klubas, UAB
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/nemokumas/imone/Mb-Gelu/code/305735238/" onclick="count_clicks('nemokumas');">
+                                    Gelu, MB
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/nemokumas/imone/Uab-Smetonos-Klubas/code/304787958/" onclick="count_clicks('nemokumas');">
+                                    Smetonos klubas, UAB
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/nemokumas/imone/Uab-Vipresta/code/305245095/" onclick="count_clicks('nemokumas');">
+                                    Vipresta, UAB
+                                </a>
+                            </li>
+                        
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 collapse-decor mb-md-5 mb-xl-0">
+                <h4 class="h4 opener collapsed" data-toggle="collapse" data-target="#collapse182" aria-expanded="true" aria-controls="collapse1"><a href="/imones/n/noriu/jar_dokumentai/">Juridinių asmenų registro dokumentai</a><i class="chevron-down"></i></h4>
+                <div id="collapse182" class="" data-parent="#accordionFooterNav">
+                    <ul class="footer-menu">
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/jar_dokumentai/imone/Uab-Trade-System/code/302496847/" onclick="count_clicks('jar_dokumentai');">
+                                    UAB TRADE SYSTEM
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/jar_dokumentai/imone/Uab-Geroves-Prekyba/code/304147463/" onclick="count_clicks('jar_dokumentai');">
+                                    UAB "GEROVĖS PREKYBA"
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/jar_dokumentai/imone/O-Danilevskaya-Ii/code/303380888/" onclick="count_clicks('jar_dokumentai');">
+                                    O. DANILEVSKAYA IĮ
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/jar_dokumentai/imone/Uab-Litekma/code/304558596/" onclick="count_clicks('jar_dokumentai');">
+                                    UAB "LITEKMA"
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="/imones/n/noriu/jar_dokumentai/imone/Ii-Orstunis/code/303353097/" onclick="count_clicks('jar_dokumentai');">
+                                    IĮ "ORSTUNIS"
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 collapse-decor mb-md-5 mb-xl-0">
+                <h4 class="h4 opener collapsed" data-toggle="collapse" data-target="#collapse187" aria-expanded="true" aria-controls="collapse1">Naujos registruotos įmonės<i class="chevron-down"></i></h4>
+                <div id="collapse187" class="" data-parent="#accordionFooterNav">
+                    <ul class="footer-menu">
+                                                    <li>
+                                <a href="/imones/imone-Sprendimu-Architektas-Mb/noriu/kontaktai/info/1334163/" onclick="count_clicks('naujos_imones');">
+                                    SPRENDIMŲ ARCHITEKTAS MB
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/imones/imone-Uab-Bite-Group/noriu/kontaktai/info/1333988/" onclick="count_clicks('naujos_imones');">
+                                    UAB "BITĖ GROUP"
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/imones/imone-Mb-Panaderia/noriu/kontaktai/info/1334539/" onclick="count_clicks('naujos_imones');">
+                                    MB "PANADERIA"
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/imones/imone-Vsi-Young-Dreams/noriu/kontaktai/info/1334366/" onclick="count_clicks('naujos_imones');">
+                                    VŠĮ "YOUNG DREAMS"
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/imones/imone-Mb-Nulis-Prakaito/noriu/kontaktai/info/1334534/" onclick="count_clicks('naujos_imones');">
+                                    MB "NULIS PRAKAITO"
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <h4 class="h4 mr-md-4 mr-xl-0">Sekite mus</h4>
+                <ul class="social-network collapse-decor">
+
+
+
+
+
+
+
+
+
+
+                    <li class="social-item">
+                        <a href="https://www.facebook.com/Nemokumo-Vertinimo-Sistema-109503684170118" title="Facebook" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M1324.676 4025h-21.352c-.731 0-1.324.593-1.324 1.324v21.352c0 .732.593 1.324 1.324 1.324h11.494v-9.294h-3.129v-3.621h3.129v-2.675c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63h-3.119V4049h6.115c.733 0 1.325-.592 1.325-1.324v-21.352c0-.731-.592-1.324-1.324-1.324" fill="#7f7f7f" transform="translate(-1302 -4025)"></path>
+                            </svg>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+                    <li class="social-item">
+                        <a href="https://www.youtube.com/user/creditreformlt/featured" title="Youtube" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon" width="30px" height="30px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+                                <defs></defs>
+                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="ic/some_youtube_color">
+                                        <g id="Page-1" transform="translate(0.000000, 4.000000)">
+                                            <rect id="Rectangle" fill="#FFFFFF" x="8" y="4" width="9" height="9"></rect>
+                                            <path d="M9.54545455,12.008681 L9.54545455,4.88020789 L15.8181818,8.44458065 L9.54545455,12.008681 Z M23.4984545,2.63725448 C23.2224545,1.59913262 22.4091818,0.781655914 21.3766364,0.504215054 C19.5050455,0 12,0 12,0 C12,0 4.49495455,0 2.62336364,0.504215054 C1.59081818,0.781655914 0.777545455,1.59913262 0.501545455,2.63725448 C0,4.51873118 0,8.44444444 0,8.44444444 C0,8.44444444 0,12.3700215 0.501545455,14.2516344 C0.777545455,15.2897563 1.59081818,16.107233 2.62336364,16.38481 C4.49495455,16.8888889 12,16.8888889 12,16.8888889 C12,16.8888889 19.5050455,16.8888889 21.3766364,16.38481 C22.4091818,16.107233 23.2224545,15.2897563 23.4984545,14.2516344 C24,12.3700215 24,8.44444444 24,8.44444444 C24,8.44444444 24,4.51873118 23.4984545,2.63725448 Z" id="Fill-1" fill="#FF0000"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="row footer-down">
+            <div class="col-12 col-md-6 col-xl-6">
+                     <span class="copyright">
+                      © 2007-2023 CR.lt - <a href="http://www.creditreform.lt" style="color: #B8CDD8">UAB „Creditreform Lietuva“</a> administruojama duomenų bazė
+                     </span>
+            </div>
+            <div class="col-12 col-md-6 col-xl-6">
+                <ul class="footer-menu">
+                   <li> <a href="/naujienos">Naujienos</a> &nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li> <a href="/kontaktai">Kontaktai</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li> <a href="/taisykles">Taisyklės</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li> <a href="/imones/n/noriu/privatumas/">Informacija duomenų subjektams</a>&nbsp;</li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li> <a href="/pagalba" target="cr_pagalba">Pagalba</a>&nbsp;</li>
+                </ul>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <script>
+        
+        $(".opener").click(function () {
+            if($('.chevron-down').is(':visible')) {
+                $($(this).attr("data-target")).toggle();
+            }
+        });
+
+
+        </script>
+    
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8YY5190MD1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8YY5190MD1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    var selectedDeepItem = $("#main-menu ul li a.selected").length;
+    if (selectedDeepItem) {
+        // If child is selected Opens master option
+        $("#main-menu ul li a.selected").parents("div#main-menu>ul>li.close").find("span.selected").click();
+    }
+
+    msg_1 = 'Jei nežinote tikslios žodžio dalies, naudokite simbolį * (žvaigždutę)';
+    msg_2 = 'Įmonės kodas skaitmeninis!';
+    msg_3 = 'Įmonės kodą turi sudaryti 7 arba 9 skaitmenys';
+    msg_4 = 'Kliento kodas ?';
+    msg_5 = 'Slaptažodis ?';
+    msg_6 = 'Nurodykite įmonės kodą, arba pavadinimą, arba vadovą, arba prekinį ženklą!';
+    msg_7 = 'Įveskite kliento kodą ir slaptažodį';
+    msg_8 = 'Tikrinti Juridinių Asmenų Registre';
+    msg_9 = 'Tikrinti LR VMI Mokesčių mokėtojų registre';
+    msg_10 = 'Tikrinti LR VMI PVM mokėtojų registre';
+    msg_11 = 'Pelno mokesčio deklaracija';
+    msg_12 = 'Nėra registruotas LR Juridinių asmenų registre';
+    msg_13 = 'Įmonių ryšiai, pagal šį lauką';
+    msg_14 = 'Įmonės paieška';
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

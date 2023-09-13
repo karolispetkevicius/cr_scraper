@@ -1,0 +1,17 @@
+import openpyxl
+
+
+workbook = openpyxl.load_workbook('cr_scraper/Codes.xlsx')
+sheet = workbook.active
+
+
+Codes = []
+
+for row in sheet.iter_rows(min_row=2, max_col=2, values_only=True):
+    Code = row[0]
+    number = row[1]
+    if Code == 'Kodas' and number is not None:
+        Codes.append(number)
+
+
+print(Codes)
